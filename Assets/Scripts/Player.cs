@@ -5,6 +5,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    #region CONSTANTS
+    private const string grabTag = "Grab";
+
+    private const float grabCooldown = 0.2f;
+    #endregion
+
+    public int numOfJumps = 1;
+    public int numOfAirDashes = 1;
+
     public bool canWalk = false;
     public float movementSpeed;
 
@@ -19,7 +28,13 @@ public class Player : MonoBehaviour
     private float powerDivident = 200f; // Brings dragDistance to a smaller number so that player doesn't jump too far. Normalize didn't work properly.
     private Rigidbody2D rb;
     private Vector2 direction;
+
+    private bool canGrab = true;
+    private bool isGrabbing = false;
     private bool isGrounded = true;
+
+    private float cooldown = 0f;
+    private Cooldown cooldownObj;
 
     private void Start()
     {
@@ -36,13 +51,23 @@ public class Player : MonoBehaviour
     private void Update()
     {
         //Debug.Log("Grounded: " + isGrounded);
+        Debug.Log(("cooldown: " + cooldown));
+        canGrab = cooldown <= 0;
     }
 
     private void HandleInput(Vector2 dragDistance)
     {
+        if (isGrabbing)
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            isGrabbing = false;
+            cooldown = grabCooldown;
+        }
+
         if (dragDistance.normalized.y >= positiveCutOffAngle)
         {
-            Jump(dragDistance);
+            if (numOfJumps > 0)
+                Jump(dragDistance);
         }
         else
         {
@@ -94,14 +119,25 @@ public class Player : MonoBehaviour
         rb.AddForce(direction * movementSpeed * Time.fixedDeltaTime, ForceMode2D.Impulse);
     }
 
-    private void OnColliderEnter(Collider col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
         isGrounded = true;
+
+        if (canGrab)
+        {
+            if (col.collider.CompareTag(grabTag))
+            {
+                rb.bodyType = RigidbodyType2D.Static;
+                isGrabbing = true;
+            }
+        }
+        
     }
 
-    private void OnColliderExit(Collider col)
+    private void OnCollisionExit2D(Collision2D col)
     {
         isGrounded = false;
     }
+
 
 }
