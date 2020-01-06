@@ -325,7 +325,7 @@ Transform:
   m_GameObject: {fileID: 392615793}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.93, z: 0}
-  m_LocalScale: {x: 9.0375, y: 1, z: 1}
+  m_LocalScale: {x: 9.0375, y: 1.0127, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -468,6 +468,7 @@ GameObject:
   - component: {fileID: 1127087532}
   - component: {fileID: 1127087529}
   - component: {fileID: 1127087533}
+  - component: {fileID: 1127087534}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -512,7 +513,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 17d7b0d8ae3c7c546af305657d06becf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72de0c64f2c6a498096698322c976a67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -550,11 +551,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09635958, y: 0.3313012}
+  m_Offset: {x: -0.07, y: -0.35}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 2.0625, y: 2}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -596,7 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2179adb7d0da444a736c93b5114bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canWalk: 0
+  canWalk: 1
   movementSpeed: 10
   dashSpeed: {x: 15, y: 7}
   jumpPower: 20
@@ -737,6 +738,25 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!95 &1127087534
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127087526}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b5b33290a6d8de4d9108a7329cb8b2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1538664678 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8170153791668043265, guid: 0d230cc8be529a542a08cb878ab14b18,
@@ -845,7 +865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1127087526}
-  lerpSpeed: 80
+  lerpSpeed: 1
 --- !u!1 &1740806871
 GameObject:
   m_ObjectHideFlags: 0

@@ -78,6 +78,12 @@ public class Player : MonoBehaviour
         else
             direction = Vector2.right * horizontal;
 
+            if(direction < 0)
+            GetComponent<SpriteRenderer>().flipX =true;
+            else 
+            GetComponent<SpriteRenderer>().flipX =false;
+
+
         rb.AddForce(direction * dashSpeed, ForceMode2D.Impulse);
     }
 
