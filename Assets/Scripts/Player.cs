@@ -33,8 +33,6 @@ public class Player : MonoBehaviour
     private bool isGrabbing = false;
     private bool isGrounded = true;
 
-    private float cooldown = 0f;
-    private Cooldown cooldownObj;
 
     private void Start()
     {
@@ -50,9 +48,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log("Grounded: " + isGrounded);
-        Debug.Log(("cooldown: " + cooldown));
-        canGrab = cooldown <= 0;
+        canGrab = !isGrabbing;
     }
 
     private void HandleInput(Vector2 dragDistance)
@@ -61,7 +57,6 @@ public class Player : MonoBehaviour
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
             isGrabbing = false;
-            cooldown = grabCooldown;
         }
 
         if (dragDistance.normalized.y >= positiveCutOffAngle)
@@ -129,9 +124,9 @@ public class Player : MonoBehaviour
             {
                 rb.bodyType = RigidbodyType2D.Static;
                 isGrabbing = true;
+                Debug.Log("Grabbed");
             }
         }
-        
     }
 
     private void OnCollisionExit2D(Collision2D col)
