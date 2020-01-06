@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-D:/Unity Projects/HookSwing/a.apk
+C:/Users/Anigma PC/Desktop/Builds/Foxtest.apk
 SceneListBegin?
 Assets/Scenes/TouchTest.unity
 SceneListEnd?
