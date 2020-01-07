@@ -1,8 +1,8 @@
 Android
 PlayerPath?
-C:/Users/Anigma PC/Desktop/Builds/Foxtest.apk
+D:/Unity Projects/HookSwing/a.apk
 SceneListBegin?
-Assets/Scenes/TouchTest.unity
+Assets/Scenes/Level1_Prototype.unity
 SceneListEnd?
 9ebfab16fc69eff62a4c5d7225fd292d Assembly-CSharp.dll:.Joystick
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:UnityEngine.UI.Extensions.ScrollSnapScrollbarHelper
@@ -303,7 +303,7 @@ cf655cac79ee71ad6403e28400c72f90 Assembly-CSharp.dll:UnityEngine.UI.Extensions.U
 caa533b001ae39b864ba8425019e2268 Assembly-CSharp.dll:UnityEngine.UI.Extensions.NicerOutline
 46f40c119782f31f4589bfebac95ba0f Assembly-CSharp.dll:UnityEngine.UI.Extensions.FlowLayoutGroup
 67f1f1031d6d0cee41159a3cbf906922 Assembly-CSharp.dll:UnityEngine.UI.Extensions.UISelectableExtension
-1c286a84c12d0ae0c7c44ae54d558090 Assembly-CSharp.dll:.Player
+e54e6fa8b27a4302905117eff079dcb0 Assembly-CSharp.dll:.Player
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 9277194e3007f91c41cc4dd392ebc5cb Assembly-CSharp.dll:Lean.Touch.LeanSelectableGraphicColor
 e4b7f5ce7f9628fc7f14612465bbc980 Assembly-CSharp.dll:UnityEngine.UI.ExtensionsToggleGroup
@@ -334,3 +334,5 @@ e5ee43ede19111e51b78dbbe3af736a9 Assembly-CSharp.dll:UnityEngine.UI.Extensions.U
 b474d6331783864a4f4f41cd2727638d Assembly-CSharp.dll:UnityEngine.UI.Extensions.SoftMaskScript
 5fe74845e214cd843e34fd736f3eabb6 Assembly-CSharp.dll:UnityEngine.UI.Extensions.DiamondGraph
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIMultiplyEffect
+61a9fa24c20d8d4765c9a8c1e0ce7503 Assembly-CSharp.dll:.ScreenSettings
+2d1876ee9599e3595f8aba14719ae822 Assembly-CSharp.dll:.GroundDetector
