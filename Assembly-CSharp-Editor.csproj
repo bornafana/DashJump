@@ -60,6 +60,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\3rd Party Assets\Joystick Pack\Scripts\Editor\DynamicJoystickEditor.cs" />
+    <Compile Include="Assets\3rd Party Assets\Joystick Pack\Scripts\Editor\FloatingJoystickEditor.cs" />
+    <Compile Include="Assets\3rd Party Assets\Joystick Pack\Scripts\Editor\JoystickEditor.cs" />
+    <Compile Include="Assets\3rd Party Assets\Joystick Pack\Scripts\Editor\VariableJoystickEditor.cs" />
     <Compile Include="Assets\3rd Party Assets\unity-ui-extensions\Editor\AccordionElementEditor.cs" />
     <Compile Include="Assets\3rd Party Assets\unity-ui-extensions\Editor\BezierLineRendererEditor.cs" />
     <Compile Include="Assets\3rd Party Assets\unity-ui-extensions\Editor\BoxSliderEditor.cs" />
@@ -73,10 +77,6 @@
     <Compile Include="Assets\3rd Party Assets\unity-ui-extensions\Editor\TextPicEditor.cs" />
     <Compile Include="Assets\3rd Party Assets\unity-ui-extensions\Editor\uGUITools.cs" />
     <Compile Include="Assets\3rd Party Assets\unity-ui-extensions\Editor\UIExtensionsMenuOptions.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Editor\DynamicJoystickEditor.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Editor\FloatingJoystickEditor.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Editor\JoystickEditor.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Editor\VariableJoystickEditor.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Unity Projects/HookSwing/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
